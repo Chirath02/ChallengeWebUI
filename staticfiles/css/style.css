@@ -55,6 +55,7 @@ body {
     border-bottom-width: 2px;
     border-bottom-color: #000000;
     border-bottom-style: solid;
+	font-family: 'Bree Serif', serif;
 }
 
 
@@ -164,6 +165,7 @@ body {
 	padding-left:9%;
 	font-size: 1.2em;
 	text-align:left;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .head1 p{
@@ -173,6 +175,7 @@ body {
 	font-size: 1.2em;
 	padding-left:2%;
 	text-align:left;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .head {
@@ -243,7 +246,8 @@ body {
 	padding:0 0 3% 3%;
 	color:#424242;
 	font-size: 2em;
-	font-weight: bold;
+	font-weight:500;
+	font-family: 'Bree Serif', serif;
 }
 
 p {
@@ -297,6 +301,32 @@ p {
 	padding:15px;
 }
 
+.blue {
+	margin: 0 0 10px 0;
+	font-size: 0.85rem;
+	padding: 10px;
+	color: white;
+	background: -webkit-linear-gradient(bottom left, #204056, #34b3a0) transparent;
+	background: linear-gradient(to top right, #204056, #34b3a0) transparent;
+	background-size: 100% 100%;
+	display: block;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+.black {
+    margin: 0 0 10px 0;
+    font-size: 0.85rem;
+    padding: 10px;
+    color: white;
+    background: -webkit-linear-gradient(bottom left,#040404, rgba(57, 58, 58, 0.79)) transparent;
+    background: linear-gradient(to top right, #040404, rgba(57, 58, 58, 0.79)) transparent;
+    background-size: 100% 100%;
+    display: block;
+    cursor: pointer;
+	font-size: 1em;
+}
+
 .output-text p {
 	font-size: 1.1em;
 	color: red;
@@ -322,8 +352,17 @@ p {
 	font-weight: 600;
 	font-size: 1.1em;
 	background: white;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
+.font {
+	font-family: 'Josefin Sans', sans-serif;
+	padding-top: 10%;
+}
+
+.font2 {
+	padding-top: 5%;
+}
 
 .text-one {
 	padding-left: 5%;
@@ -348,6 +387,7 @@ p {
 	max-height: 42px;
 	border-top: 1px solid #c5dfea;
 	border-bottom: 1px solid #c5dfea;
+	margin-top: 12%;
 }
 
 .hint-header:hover {
@@ -380,6 +420,7 @@ p {
 
 .hint-text {
 	padding: 2%;
+
 	-webkit-transition: opacity 0s linear 0.25s;
     transition: opacity 0s linear 0.25s;
 	display:none;
