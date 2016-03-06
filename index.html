@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ACE in Action</title>
+        <link rel="stylesheet" href="staticfiles/css/bootstrap.min.css">
+        <link rel="stylesheet" href="staticfiles/css/animate.css">
+        <link rel="stylesheet" href="staticfiles/css/font-awesome.min.css">
+        <link rel="stylesheet" href="staticfiles/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="nav" id="nav">
+            <div class="container">
+                <div class="navbar-header animated bounceInLeft">
+                    <p class="nav-bar-name">Hackademic</p>
+                </div>
+            </div>
+        </nav>
+
+        <div class="output animated bounceInUp">
+            <div class="output-text">
+                <p>SyntaxError: Unexpected token var</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container-fluid">
+
+
+                        <div class="head">
+                                <p> <i class="fa fa-file-text-o fa-lg"></i> Explanation</p>
+
+                        </div>
+                        <div class="head1" style="padding:0;">
+                                <p><i class="fa fa-code fa-lg"></i> Code Editor</p>
+                        </div>
+                        <div class="heading animated bounceInLeft">
+
+                            <h3>Introduction</h3>
+
+                            <p>
+                                Programming is simply a way to give instructions to the computer.
+                            </p>
+
+                            <p>
+                                In Getting Started, we learned about if / else statements.
+                            </P>
+
+                            <p>
+                                We want to keep learning ways to instruct the computer to perform repeatable tasks efficiently.
+                            </p>
+                        </div>
+
+
+                        <div class="text-area container-fluid"> </div>
+
+                <div class="color-change">
+
+
+                    <div class="buttons">
+                        <div class="lesson-links">
+                            <p id="light" class="color_link">Light</p>
+                            <p id="dark" class="color_link">Dark</p>
+                        </div>
+
+                </div>
+            </div>
+
+<!--Editor window start-->
+
+                    <div>
+                        <div class="text-box">
+                            <div id="editor">function foo(items, nada) {
+    for (var i=0;i>items.length;i++) {
+        alert(items[i] + "juhu\n");
+    }	// Real Tab.
+}</div>
+                        </div>
+                        <div class="col-md-8  submit-button pull-right">
+                            <div class="container-fluid">
+                                <button class="btn btn-primary submit-btn" id="save">  <span class="btn-text">Submit<span></button>
+                                <p class="btn btn-primary reset-btn" id="reset"> Reset Code</p>
+                                <p class="btn btn-default button lineno pull-right" id="gutter-change">Line number</p>
+                            </div>
+                        </div>
+                    </div>
+
+<!--Editor window end-->
+                    <footer class="footer">
+                        <div class="col-md-12 aside">
+
+                        </div>
+                    </footer>
+
+                </div>
+        </div>
+
+
+
+        <!-- Start of ace editor configuration -->
+        <script src="staticfiles/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+
+            var editor = (function() {
+                var editor = ace.edit("editor");
+                editor.setTheme("ace/theme/ambiance");
+                editor.getSession().setTabSize(4);
+                document.getElementById('editor').style.fontSize='18px';
+                editor.getSession().setMode("ace/mode/javascript");
+                editor.setHighlightActiveLine(true);
+                editor.setShowPrintMargin(true);
+                $("#dark").addClass('color_link_active');
+                editor.getSession().setUseWrapMode(true);
+                editor.resize();
+                return editor;
+            })();
+
+            var gutter = false;
+            var date=editor.getValue();
+            $('#gutter-change').click(function (){
+                if(gutter) {
+                    editor.renderer.setShowGutter(true);
+                    gutter=false;
+                    $('#gutter-change').removeClass('reset-btn');
+                    $(this).addClass('lineno');
+
+                }
+                else {
+                    editor.renderer.setShowGutter(false);
+                    gutter=true;
+                    $('#gutter-change').removeClass('lineno');
+                    $(this).addClass('reset-btn');
+                }
+            });
+
+            $('#save').click(function (){
+                data = editor.getValue();
+            });
+
+            $('#reset').click(function (){
+                editor.setValue(data);
+            });
+
+
+            $('#light').click(function (){
+                editor.setTheme("ace/theme/chrome");
+                $('#dark').removeClass('color_link_active');
+                $(this).addClass('color_link_active');
+            });
+            $('#dark').click(function (){
+                editor.setTheme("ace/theme/ambiance");
+                $('#light').removeClass('color_link_active');
+                $(this).addClass('color_link_active');
+            });
+
+        </script>
+
+
+        <script src="staticfiles/src/ambiance.js" type="text/javascript" charset="utf-8"></script>
+        <script src="staticfiles/src/chrome.js" type="text/javascript" charset="utf-8"></script>
+        <!-- End of editor configuration-->
+
+        <script src="staticfiles/js/bootstrap.min.js"></script>
+        <script src="staticfiles/js/wow.min.js"></script>
+
+    </body>
+</html>
