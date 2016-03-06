@@ -218,22 +218,23 @@ body {
 
 
 .heading {
-	top: 130px;
+	left:0;
+	top: 110px;
     z-index: 10;
     position: fixed;
-    width: 21%;
-	height:60%;
+    width: 23%;
+	bottom:90px;
 	overflow: scroll;
 	overflow-x:hidden;
 }
 
-.heading p {
+#head-text {
 	padding:7% 0 3% 3%;
 	font-size: 1.2em;
 	font-family: "Open Sans","Hevetica Neue","Helvetica",sans-serif;
 }
 
-.heading h3 {
+#head-title {
 	padding:0 0 3% 3%;
 	color:#424242;
 	font-size: 2em;
@@ -277,7 +278,7 @@ p {
 	position:fixed;
 	z-index: 100000;
 	right: 1%;
-	top: 9%;
+	top: 12%;
 }
 
 .output-text {
@@ -286,7 +287,7 @@ p {
 	width:400px;
 	z-index: 100000;
 	right: 1%;
-	top: 9%;
+	top: 12%;
 	border: 7px solid rgb(41, 41, 41);
 	background: black;
 	box-shadow: 2px 1px 2px #383838;
@@ -296,4 +297,32 @@ p {
 .output-text p {
 	font-size: 1.1em;
 	color: red;
+}
+
+.instructions {
+
+	padding: 0 0 0 0;
+	background-color: #f0faff;
+	border-top: 1px solid #c5dfea;
+	border-bottom: 1px solid #c5dfea;
+	left:0;
+
+}
+
+.instructions-btn {
+	margin:-12px 0 0 33%;
+	padding: 10px 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 0 0 0 0;
+	width:110px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+
+.text-one {
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 8%;
 }
