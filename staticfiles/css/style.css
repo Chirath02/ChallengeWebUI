@@ -361,18 +361,12 @@ p {
 }
 
 .font {
-	font-family: Georgia, Times, 'Times New Roman', serif;
-	font-size: .9em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 	padding-top: 10%;
 }
 
 .font2 {
 	padding-top: 5%;
-
 }
 
 .text-one {
