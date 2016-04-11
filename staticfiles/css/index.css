@@ -1,0 +1,29 @@
+#nav {
+    background-color: #000000;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f0f0f0));
+    background-image: -webkit-linear-gradient(top, #444444, #0A0A0A);
+    background-image: linear-gradient(top, #fff, #f0f0f0);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    cursor: default;
+    height: 60px;
+    border-width: 2px;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+	font-family: 'Bree Serif', serif;
+}
+
+.nav-bar-name {
+	margin-left: 0;
+	padding: 5px 5px 5px 5px;
+	font-size: 2.3em;
+	font-weight: 600;
+	color:white;
+}
