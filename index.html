@@ -12,51 +12,134 @@
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Bree+Serif|Righteous' rel='stylesheet' type='text/css'>
 
     <body>
+        
+    <!-- Navbar -->
         <nav class="nav" id="nav">
             <div class="container">
                 <div class="navbar-header animated bounceInLeft">
                     <p class="nav-bar-name name">Hackademic</p>
                 </div>
-
-<!-- Edit the title below -->
-
                 <div class="title-main">
                     <p>Challenges</p>
                 </div>
 
-<!-- Edit the title below -->
-
             </div>
         </nav>
-
-
-
-        <div class="container-fluid">
-            <div class="head">
-                <p> <i class="fa fa-file-text-o fa-lg"></i> Explanation</p>
-            </div>
-            <div class="head1" style="padding:0;">
-                <p><i class="fa fa-code fa-lg"></i> Code Editor</p>
-            </div>
-
-
-<!-- Edit the text below -->
-
-
-            
-                </div>
-           
-
-<!-- Edit the text above -->
-
-
-            <div class="text-area container-fluid"> </div>
-
-
-
-
-
-
         
+    <!-- Easy Medium and Hard filter button -->
+        <div id="challenge-division" class="col-md-3">
+            <p id="challenge-division-heading">Challenges</p>
+            <ul id="challenges">
+                <li class="challenge" id="challenge-all">All Challenges</li>
+                <li class="challenge" id="challenge-sql">SQL</li>
+                <li class="challenge" id="challenge-xss">XSS</li>
+            </ul>
+        </div>
+        
+        
+        <div class="btn-group pull-right" id="easy-med-hard-btn" role="group">
+          <button type="button" class="btn btn-default">Easy</button>
+          <button type="button" class="btn btn-default">Medium</button>
+          <button type="button" class="btn btn-default">Hard</button>
+        </div>
+        
+        <div class="col-md-8 challenge-list">
+            
+            
+            <p id="challenge-type-head">All Challenges</p>
+            
+            
+            <div class="challenge-box challenge-sql">
+                <br>
+                <a id="challenge1" class="challenge-title" href="challenge.html">Challenge 1</a>
+                <p class="challenge-description">
+                    XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
+                </p>
+                <p class="challenge-type">Type : <span style="color:#535353"> SQL</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-easy">Easy</span></p>
+                <div class="button-style">
+                    <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
+                </div>
+                
+            </div>
+            
+            
+            <div class="challenge-box challenge-sql">
+                <br>
+                <a id="challenge2" class="challenge-title" href="challenge.html">Challenge 2</a>
+                <p class="challenge-description">
+                    XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
+                </p>
+                <p class="challenge-type">Type : <span style="color:#535353"> SQL</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-hard">Hard</span></p>
+                <div class="button-style">
+                    <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
+                </div>
+            </div>
+            
+            
+            <div class="challenge-box challenge-xss">
+                <br>
+                <a id="challenge3" class="challenge-title" href="challenge.html">Challenge 3</a>
+                <p class="challenge-description">
+                    XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
+                </p>
+                <p class="challenge-type">Type : <span style="color:#535353"> XSS</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-med">Medium</span></p>
+                <div class="button-style">
+                    <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
+                </div>
+            </div>
+            
+            
+            <div class="challenge-box challenge-sql">
+                <br>
+                <a id="challenge4" class="challenge-title" href="challenge.html">Challenge 4</a>
+                <p class="challenge-description">
+                    XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
+                </p>
+                <p class="challenge-type">Type : <span style="color:#535353"> SQL</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-med">Med</span></p>
+                <div class="button-style">
+                    <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
+                </div>
+            </div>
+            
+            
+            <div class="challenge-box challenge-xss">
+                <br>
+                <a id="challenge5" class="challenge-title" href="challenge.html">Challenge 5</a>
+                <p class="challenge-description">
+                    XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
+                </p>
+                <p class="challenge-type">Type : <span style="color:#535353"> XSS</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-hard">Hard</span></p>
+                <div class="button-style">
+                    <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+                $("#challenge-all").click(function(){
+                    $('.challenge-sql').show();
+                    $('.challenge-xss').show();
+                    $('#challenge-type-head').text("All challenges");
+                });
+                $("#challenge-sql").click(function(){
+                    $('.challenge-sql').show();
+                    $('.challenge-xss').hide();
+                    $('#challenge-type-head').text("SQL");
+                });
+                $("#challenge-xss").click(function(){
+                    $('.challenge-sql').hide();
+                    $('.challenge-xss').show();
+                    $('#challenge-type-head').text("XSS");
+                });
+            });
+        </script>
     </body>
 </html>
