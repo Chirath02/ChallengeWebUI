@@ -38,9 +38,9 @@
         
         
         <div class="btn-group pull-right" id="easy-med-hard-btn" role="group">
-          <button type="button" class="btn btn-default">Easy</button>
-          <button type="button" class="btn btn-default">Medium</button>
-          <button type="button" class="btn btn-default">Hard</button>
+          <button type="button" class="btn btn-default" id="easy">Easy</button>
+          <button type="button" class="btn btn-default" id="med">Medium</button>
+          <button type="button" class="btn btn-default" id="hard">Hard</button>
         </div>
         
         <div class="col-md-8 challenge-list">
@@ -49,7 +49,7 @@
             <p id="challenge-type-head">All Challenges</p>
             
             
-            <div class="challenge-box challenge-sql">
+            <div class="challenge-box challenge-sql-easy">
                 <br>
                 <a id="challenge1" class="challenge-title" href="challenge.html">Challenge 1</a>
                 <p class="challenge-description">
@@ -64,7 +64,7 @@
             </div>
             
             
-            <div class="challenge-box challenge-sql">
+            <div class="challenge-box challenge-sql-hard">
                 <br>
                 <a id="challenge2" class="challenge-title" href="challenge.html">Challenge 2</a>
                 <p class="challenge-description">
@@ -78,7 +78,7 @@
             </div>
             
             
-            <div class="challenge-box challenge-xss">
+            <div class="challenge-box challenge-xss-med">
                 <br>
                 <a id="challenge3" class="challenge-title" href="challenge.html">Challenge 3</a>
                 <p class="challenge-description">
@@ -92,21 +92,21 @@
             </div>
             
             
-            <div class="challenge-box challenge-sql">
+            <div class="challenge-box challenge-sql-med">
                 <br>
                 <a id="challenge4" class="challenge-title" href="challenge.html">Challenge 4</a>
                 <p class="challenge-description">
                     XSS permits a malevolent user to inject his own code in vulnerable web pages. According to the OWASP 2010 Top 10 Application Security Risks, XSS attacks rank 2nd in the "most dangerous" list.
                 </p>
                 <p class="challenge-type">Type : <span style="color:#535353"> SQL</span></p>
-                <p class="challenge-type">Difficulty : <span class="difficulty-med">Med</span></p>
+                <p class="challenge-type">Difficulty : <span class="difficulty-med">Medium</span></p>
                 <div class="button-style">
                     <button class="solve-challenge-btn btn btn-primary">Solve Challenge</button>
                 </div>
             </div>
             
             
-            <div class="challenge-box challenge-xss">
+            <div class="challenge-box challenge-xss-easy">
                 <br>
                 <a id="challenge5" class="challenge-title" href="challenge.html">Challenge 5</a>
                 <p class="challenge-description">
@@ -123,22 +123,87 @@
         </div>
         
         <script>
+            var type = 0;
+            
+                function sql_show_all() {
+                    $('.challenge-sql-easy').show();
+                    $('.challenge-sql-med').show();
+                    $('.challenge-sql-hard').show();
+                }
+                    
+                function sql_hide_all() {
+                    $('.challenge-sql-easy').hide();
+                    $('.challenge-sql-med').hide();
+                    $('.challenge-sql-hard').hide();
+                }
+                
+                function xss_show_all() {
+                    $('.challenge-xss-easy').show();
+                    $('.challenge-xss-med').show();
+                    $('.challenge-xss-hard').show();
+                }
+                
+                function xss_hide_all() {
+                    $('.challenge-xss-easy').hide();
+                    $('.challenge-xss-med').hide();
+                    $('.challenge-xss-hard').hide();
+                }
+            
+                function xss_show_easy() {
+                    $('.challenge-xss-easy').show();
+                    $('.challenge-xss-med').hide();
+                    $('.challenge-xss-hard').hide();
+                }
+            
+                function xss_show_med() {
+                    $('.challenge-xss-easy').hide();
+                    $('.challenge-xss-med').show();
+                    $('.challenge-xss-hard').hide();
+                }
+            
+                function xss_show_hard() {
+                    $('.challenge-xss-easy').hide();
+                    $('.challenge-xss-med').hide();
+                    $('.challenge-xss-hard').show();
+                }
+            
+                
             $(document).ready(function(){
+                
                 $("#challenge-all").click(function(){
-                    $('.challenge-sql').show();
-                    $('.challenge-xss').show();
+                    sql_show_all();
+                    xss_show_all();
                     $('#challenge-type-head').text("All challenges");
+                    type = 0;
                 });
                 $("#challenge-sql").click(function(){
-                    $('.challenge-sql').show();
-                    $('.challenge-xss').hide();
+                    xss_hide_all();
+                    sql_show_all();
                     $('#challenge-type-head').text("SQL");
+                    type = 1;
                 });
                 $("#challenge-xss").click(function(){
-                    $('.challenge-sql').hide();
-                    $('.challenge-xss').show();
+                    sql_hide_all();
+                    xss_show_all();
                     $('#challenge-type-head').text("XSS");
+                    type = 2;
                 });
+                
+                
+                if(type = 0) {
+                    $('#easy').click(funtion() {
+                                     
+                    });
+                    $('#hard').click(funtion() {
+                                     
+                    });
+                    $('#hard').click(funtion() {
+                                     
+                    });
+                }
+                
+                    
+                
             });
         </script>
     </body>
