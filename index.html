@@ -198,6 +198,10 @@
                     $('#challenge-type-head').text("All challenges");
                     type = 0;
                     remove_color_button();
+                    
+                     $('#challenge-all').addClass('challenge-select');
+                    $('#challenge-sql').removeClass('challenge-select');
+                    $('#challenge-xss').removeClass('challenge-select');
                 });
                 $("#challenge-sql").click(function(){
                     xss_hide_all();
@@ -205,6 +209,10 @@
                     $('#challenge-type-head').text("SQL");
                     type = 1;
                     remove_color_button();
+                    
+                    $('#challenge-all').removeClass('challenge-select');
+                    $('#challenge-sql').addClass('challenge-select');
+                    $('#challenge-xss').removeClass('challenge-select');
                 });
                 $("#challenge-xss").click(function(){
                     sql_hide_all();
@@ -212,8 +220,11 @@
                     $('#challenge-type-head').text("XSS");
                     type = 2;
                     remove_color_button();
+                    
+                    $('#challenge-all').removeClass('challenge-select');
+                    $('#challenge-sql').removeClass('challenge-select');
+                    $('#challenge-xss').addClass('challenge-select');
                 });
-                
                 
 
                 $('#easy').click(function() {
@@ -266,11 +277,7 @@
                         xss_show_hard();
                         sql_hide_all();
                     }
-                });
-
-                
-                    
-                
+                }); 
             });
         </script>
     </body>
