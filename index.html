@@ -106,7 +106,7 @@
             </div>
             
             
-            <div class="challenge-box challenge-xss-easy">
+            <div class="challenge-box challenge-xss-hard">
                 <br>
                 <a id="challenge5" class="challenge-title" href="challenge.html">Challenge 5</a>
                 <p class="challenge-description">
@@ -167,6 +167,22 @@
                     $('.challenge-xss-hard').show();
                 }
             
+                function sql_show_easy() {
+                    $('.challenge-sql-easy').show();
+                    $('.challenge-sql-med').hide();
+                    $('.challenge-sql-hard').hide();
+                }
+                function sql_show_med() {
+                    $('.challenge-sql-easy').hide();
+                    $('.challenge-sql-med').show();
+                    $('.challenge-sql-hard').hide();
+                }
+                function sql_show_hard() {
+                    $('.challenge-sql-easy').hide();
+                    $('.challenge-sql-med').hide();
+                    $('.challenge-sql-hard').show();
+                }
+            
                 
             $(document).ready(function(){
                 
@@ -190,17 +206,53 @@
                 });
                 
                 
-                if(type = 0) {
-                    $('#easy').click(funtion() {
+
+                $('#easy').click(function() {
+                    if(type == 0) {
+                        sql_show_easy();
+                        xss_show_easy();
+                    }
+                    else if(type == 1) {
+                        sql_show_easy();
+                        xss_hide_all();
+                    }
+                    else if(type == 2) {
+                        xss_show_easy();
+                        sql_hide_all();
+                    }
                                      
-                    });
-                    $('#hard').click(funtion() {
-                                     
-                    });
-                    $('#hard').click(funtion() {
-                                     
-                    });
-                }
+                });
+                
+                $('#med').click(function() {
+                    if(type == 0) {
+                        sql_show_med();
+                        xss_show_med();
+                    }
+                    else if(type == 1) {
+                        sql_show_med();
+                        xss_hide_all();
+                    }
+                    else if(type == 2) {
+                        xss_show_med();
+                        sql_hide_all();
+                    }
+                });
+                
+                $('#hard').click(function() {
+                    if(type == 0) {
+                        sql_show_hard();
+                        xss_show_hard();
+                    }  
+                    else if(type == 1) {
+                        sql_show_hard();
+                        xss_hide_all();
+                    }
+                    else if(type == 2) {
+                        xss_show_hard();
+                        sql_hide_all();
+                    }
+                });
+
                 
                     
                 

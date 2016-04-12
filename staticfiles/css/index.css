@@ -73,18 +73,24 @@
 }
 
 #challenge-type-head {
-	font-weight: 900;
+	font-weight: bold;
 	font-size: 2.2em;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
 .challenge-title {
-    color:#4981ff;
+    color:#292828;
     margin-left: 3%;
     font-size: 2em;
-    font-weight:600;
+    font-weight:500;
     padding-bottom:10px;
     display:inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#535355;   
 }
 
 .challenge-type {
@@ -109,11 +115,11 @@
 }
 
 .solve-challenge-btn {
-    border-color: #679EEC;
-    border-bottom-color: #006178;
-    background-color: #2978B3;
+    border-color: #9C9898;
+    border-bottom-color: #5F5F5F;
+    background-color: #000000;
     background-image: -webkit-gradient(linear, top left, bottom left, color-stop(0, #2ec866), color-stop(1, #29b35b));
-    background-image: -webkit-linear-gradient(top, #2FE9F9, #29ABB3);
+    background-image: -webkit-linear-gradient(top, #989797, #000000);
     background-image: -moz-linear-gradient(top, #2ec866, #29b35b);
     background-image: -ms-linear-gradient(top, #2ec866, #29b35b);
     background-image: -o-linear-gradient(top, #2ec866, #29b35b);
@@ -136,4 +142,34 @@
     padding-left: 3%;
     color: #646464;
     padding-right: 3%;
+}
+
+#easy {
+    background-image: -webkit-linear-gradient(top, #57ff41, #1cad09);
+    color: white;
+}
+
+#easy:hover {
+    background-image: -webkit-linear-gradient(top, #57ff41, #127905);
+    font-weight: 600;
+}
+
+#med {
+    background-image: -webkit-linear-gradient(top, #edff65, #fc970e);
+    color: white;
+}
+
+#med:hover {
+    background-image: -webkit-linear-gradient(top, #edff65, #f5aa00);
+    font-weight: 600;
+}
+
+#hard {
+    background-image: -webkit-linear-gradient(top, #f58787, #ff0404);
+    color: white;
+}
+
+#hard:hover {
+    background-image: -webkit-linear-gradient(top, #f58787, #ff0404);
+    font-weight: 600;
 }
