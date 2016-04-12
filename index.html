@@ -183,6 +183,12 @@
                     $('.challenge-sql-hard').show();
                 }
             
+                function remove_color_button() {
+                    $( "#easy" ).removeClass( "easy-color" );
+                    $( "#med" ).removeClass( "med-color" );
+                    $( "#hard" ).removeClass( "hard-color" );
+                }
+            
                 
             $(document).ready(function(){
                 
@@ -191,23 +197,28 @@
                     xss_show_all();
                     $('#challenge-type-head').text("All challenges");
                     type = 0;
+                    remove_color_button();
                 });
                 $("#challenge-sql").click(function(){
                     xss_hide_all();
                     sql_show_all();
                     $('#challenge-type-head').text("SQL");
                     type = 1;
+                    remove_color_button();
                 });
                 $("#challenge-xss").click(function(){
                     sql_hide_all();
                     xss_show_all();
                     $('#challenge-type-head').text("XSS");
                     type = 2;
+                    remove_color_button();
                 });
                 
                 
 
                 $('#easy').click(function() {
+                    remove_color_button();
+                    $( "#easy" ).addClass( "easy-color" );
                     if(type == 0) {
                         sql_show_easy();
                         xss_show_easy();
@@ -220,10 +231,12 @@
                         xss_show_easy();
                         sql_hide_all();
                     }
-                                     
+                              
                 });
                 
                 $('#med').click(function() {
+                    remove_color_button();
+                    $( "#med" ).addClass( "med-color" );
                     if(type == 0) {
                         sql_show_med();
                         xss_show_med();
@@ -239,6 +252,8 @@
                 });
                 
                 $('#hard').click(function() {
+                    remove_color_button();
+                    $( "#hard" ).addClass( "hard-color" );
                     if(type == 0) {
                         sql_show_hard();
                         xss_show_hard();

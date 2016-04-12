@@ -144,7 +144,7 @@ a:hover {
     padding-right: 3%;
 }
 
-#easy {
+.easy-color {
     background-image: -webkit-linear-gradient(top, #57ff41, #1cad09);
     color: white;
 }
@@ -154,7 +154,7 @@ a:hover {
     font-weight: 600;
 }
 
-#med {
+.med-color {
     background-image: -webkit-linear-gradient(top, #edff65, #fc970e);
     color: white;
 }
@@ -164,7 +164,7 @@ a:hover {
     font-weight: 600;
 }
 
-#hard {
+.hard-color {
     background-image: -webkit-linear-gradient(top, #f58787, #ff0404);
     color: white;
 }
